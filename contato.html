@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contato - Acessibilidade</title>
+    <link rel="stylesheet" href="contato.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="botoes-acessibilidade">
+            <button onclick="aumentarFonte()">A+</button>
+            <button onclick="diminuirFonte()">A-</button>
+            <button onclick="resetarAcessibilidade()">Reset</button>
+            <button class="botao-surpresa" onclick="irParaSurpresa()"> Surpresa!</button>
+        </div>
+
+        <nav class="navbar">
+            <a href="site.html" class="logo">Acessibilidade+</a>
+            <ul class="nav-links">
+                <li><a href="site.html">Início</a></li>
+                <li><a href="sobre.html">Sobre Nós</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="contato.html" class="active">Contato</a></li>
+                <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+            </ul>
+        </nav>
+
+        <h1>Entre em Contato Conosco</h1>
+        <p>Estamos prontos para ouvir você. Preencha o formulário ou use nossos canais de atendimento.</p>
+    </header>
+
+    <main>
+        <section class="contact-container">
+            <form aria-label="Formulário de contato">
+                <label for="nome">Nome</label>
+                <input type="text" id="nome" name="nome" required aria-required="true">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required aria-required="true">
+                <label for="assunto">Assunto</label>
+                <input type="text" id="assunto" name="assunto">
+                <label for="mensagem">Mensagem</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required aria-required="true"></textarea>
+                <button type="submit">Enviar Mensagem</button>
+            </form>
+            <div class="contact-info">
+                <h2>Outras formas de contato</h2>
+                <p><strong>Telefone:</strong> <a href="tel:+5540028922">4002 8922</a></p>
+                <p><strong>WhatsApp:</strong> <a href="https://wa.me/5540028922" target="_blank">Clique aqui</a></p>
+                <p><strong>E-mail:</strong> <a href="mailto:acessibilidade+@gmail.com">acessibilidade+@gmail.com</a></p>
+            </div>
+        </section>
+    </main>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <!-- Script de acessibilidade -->
+    <script>
+        let tamanhoFonte = 16;
+
+        function aumentarFonte() {
+            tamanhoFonte += 2;
+            document.body.style.fontSize = tamanhoFonte + 'px';
+        }
+
+        function diminuirFonte() {
+            if (tamanhoFonte > 12) {
+                tamanhoFonte -= 2;
+                document.body.style.fontSize = tamanhoFonte + 'px';
+            }
+        }
+
+        function resetarAcessibilidade() {
+            tamanhoFonte = 16;
+            document.body.style.fontSize = tamanhoFonte + 'px';
+        }
+
+        function irParaSurpresa() {
+            window.location.href = "surpresa.html";
+        }
+    </script>
+</body>
+
+</html>
