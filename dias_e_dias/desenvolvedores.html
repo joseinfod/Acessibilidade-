@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nós - Acessibilidade</title>
+    <link rel="stylesheet" href="desenvolvedores.css">
+</head>
+
+<body>
+    <button id="botao-alto-c" aria-label="Ativar modo alto contraste">Alto Contraste</button>
+    <header>
+        <h1>Equipe de Desenvolvedores</h1>
+        <p>Conheça nossa equipe e veja onde tudo acontece</p>
+    </header>
+
+    <main>
+        <section class="Desenvolvedores">
+            <nav>
+                <h2>Desenvolvedores</h2>
+                <ul>
+                    <li><strong> Gustavo Oliveira Cardoso Ferreira</strong></li>
+                    <li><strong> Igor Menezes</strong></li>
+                    <li><strong> José Arqueles dos Santos</strong></li>
+                    <li><strong> Marina Pereira de Albuquerque</strong></li>
+                    <li><strong> Yuri Argueles Fêlix</strong></li>
+                    <li><strong> Yudi Rodrigues Silva</strong></li>
+                </ul>
+            </nav>
+
+            <div class="info">
+                <h2>Informações Escolares</h2>
+                <img src="img/jose.png" alt="logo José" class="rounded-circle" width="150" height="150" srcset="">
+                <p><strong>Nome da Escola: E.E. José Ephim Mindlin</strong></p>
+                <p>
+                    <strong>Localização:</strong>
+                    <a href="https://www.google.com/maps/dir//E.E.+Jos%C3%A9+Ephim+Mindlin+-+R.+Augusto+Teixeira,+101+-+Parque+America,+SP,+04841-160"
+                        target="_blank">⇨ Clique aqui ⇦</a>
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script>
+        const toggle = document.getElementById('botao-alto-c');
+        toggle.addEventListener('click', () => {
+            document.body.classList.toggle('high-contrast');
+        });
+    </script>
+</body>
+
+</html>

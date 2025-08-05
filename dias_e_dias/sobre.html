@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre - Acessibilidade+</title>
+    <link rel="stylesheet" href="sobre.css">
+    <link rel="stylesheet" href="site.html">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img src="logo" alt="">
+
+            <ul class="menu">
+                <h1 class="logo">Acessibilidade+</h1>
+                <li><a href="site.html">Início</a></li>
+                <li><a href="sobre.html" class="active">Sobre</a></li>
+                <li><a href="recursos.html">Recursos</a></li>
+                <li><a href="contato.html">Contato</a></li>
+                <li><a href="desenvolvedores.html">Desenvolvedores</a></li>
+            </ul>
+            <div class="acessibilidade">
+                <button onclick="toggleContrast()">Contraste</button>
+                <button onclick="increaseFont()">A+</button>
+                <button onclick="decreaseFont()">A-</button>
+                <button onclick="resetFont()">Reset</button>
+            </div>
+        </nav>
+    </header>
+
+    <main class="page-content">
+        <img src="/image/Acessibilidade +.png" alt="Culpa do José ">
+        <div>
+            <h2>Sobre Nós</h2>
+            <p>Nosso objetivo é promover a inclusão digital e física para todas as pessoas. Acreditamos que a tecnologia
+                pode transformar vidas e eliminar barreiras.</p>
+            <p>Este projeto busca conscientizar e fornecer recursos práticos para garantir acessibilidade em diferentes
+                áreas da sociedade.</p>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 Acessibilidade+ | contato@acessibilidade.com</p>
+    </footer>
+    <script src="site.js"></script>
+</body>
+
+</html>
